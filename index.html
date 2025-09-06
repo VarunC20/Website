@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Welcome to my personal site!</title>
+  <meta name="description" content="Varun S. Chavan — Mechanical Engineer & Roboticist. Projects, YouTube, and contact." />
+  <meta name="keywords" content="Varun Chavan, Robotics, Mechanical Engineering, Projects, YouTube" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+
+  <!-- Custom polish -->
+  <style>
+    /* === Full-bleed photo sections with translucent (glass) panels === */
+    .bg-photo{
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* subtle parallax on desktop */
+      isolation: isolate;
+      padding: 64px 0; /* vertical breathing room */
+      color: #fff;
+    }
+    .bg-photo::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.35); /* overlay tint */
+      z-index: -1;
+    }
+    @media (max-width: 991.98px){
+      .bg-photo{ padding: 48px 0; background-attachment: scroll; }
+    }
+      
+      /* Bigger, cleaner portrait on the left with proper scaling */
+    .about-img-large img{
+      width: 100%;
+      max-width: 420px;   /* adjust to taste */
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-top: 40px;
+    }
+
+    /* Tidy labels under the image */
+    .about-info .title-s{
+      display: inline-block;
+      min-width: 80px;
+      font-weight: 600;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 767.98px){
+      .about-img-large img{ max-width: 320px; }
+      .about-info{ text-align: center; }
+    }
+
+
+    .glass-panel{
+      background: rgba(255,255,255,0.82);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      padding: 2rem 1.25rem;
+      color: #000;
+    }
+    @media (min-width:768px){ .glass-panel{ padding: 3rem 2.5rem; } }
+
+    /* Media helpers */
+    .video-wrapper{ position:relative; width:100%; aspect-ratio:16/9; border-radius:1rem; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.12); }
+    .video-wrapper iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+    /* Responsive Google Form */
+    .responsive-form{ width:100%; max-width:760px; margin:0 auto; border-radius:1rem; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.12); background:#fff; }
+    .responsive-form iframe{ width:100%; height:clamp(620px, 80vh, 1000px); border:0; display:block; }
+
+    /* Counters */
+    .counter-box .ico-circle{ background:#fff; color:#0078ff; box-shadow:0 10px 20px rgba(0,0,0,.08); }
+    .counter-text{ letter-spacing:.08em; }
+
+    /* Card alignment & image crops */
+    .portfolio-mf .work-box{ display:flex; flex-direction:column; height:100%; }
+    .portfolio-mf .work-img img{ width:100%; height:260px; object-fit:cover; display:block; }
+    .portfolio-mf .work-content{ margin-top:auto; }
+
+    #blog .card.card-blog{ display:flex; flex-direction:column; height:100%; }
+    #blog .card.card-blog .card-img img{ width:100%; height:220px; object-fit:cover; display:block; }
+    #blog .card-footer{ margin-top:auto; }
+
+    /* Extra space so YouTube never kisses the counters */
+    section#work.portfolio-mf{ padding-bottom:80px; }
+    .video-wrapper{ margin-bottom:2rem; }
+
+    /* Minor refinements */
+    footer .credits a{ text-decoration:none; }
+  </style>
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="#hero">VSC</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
+          <li><a class="nav-link scrollto" href="#blog">Projects</a></li>
+          <li><a class="nav-link scrollto" href="#work">YouTube</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle" aria-label="Toggle Navigation"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Hero ======= -->
+  <div id="hero" class="hero route bg-image" style="background-image:url(assets/img/hero-bg.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="hero-title mb-4">I am Varun Chavan</h1>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="Engineer, Content Creator, Roboticist"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+<!-- ======= About (complete section) ======= -->
+<section id="about" class="about-mf sect-pt4 route bg-photo" style="background-image:url('assets/img/about-bg.jpg')">
+  <div class="container glass-panel">
+    <div class="row g-4 align-items-center">
+      
+      <!-- Left: big photo, info stacked underneath -->
+      <div class="col-md-5">
+        <div class="about-img about-img-large text-center text-md-start">
+          <img src="assets/img/testimonial-2.jpg"
+               class="img-fluid rounded shadow-sm"
+               alt="Portrait of Varun Chavan"
+               loading="lazy" />
+        </div>
+
+        <div class="about-info mt-3">
+          <p><span class="title-s">Name: </span> <span>Varun S. Chavan</span></p>
+          <p><span class="title-s">Profile: </span> <span>Engineer</span></p>
+          <p><span class="title-s">Email: </span> <span><a href="mailto:varunchavan20@gmail.com">varunchavan20@gmail.com</a></span></p>
+        </div>
+      </div>
+
+      <!-- Right: About me text (unchanged) -->
+      <div class="col-md-7">
+        <div class="about-me pt-4 pt-md-0">
+          <div class="title-box-2"><h5 class="title-left">About me</h5></div>
+          <p class="lead mb-0">
+            I am a Mechanical Engineer with a strong passion for <strong>Robotics</strong>. Over the years, I have worked on various robotics projects, including OSAKE, a self-learning robot 🤖 that continues to evolve as a practical embodiment of my research interests.
+            <br /><br />
+              In my current role, I contribute to the research and development of automation tools at <strong>Oriental Yeast Co. Ltd</strong> (a Nisshin Seifun Group subsidiary). I am also committed to continuous learning and actively enhancing my project management skills to better lead and execute complex, multidisciplinary projects.
+            <br /><br />
+              At the <strong>Institute of Science Tokyo</strong> (formerly Tokyo Tech), I am pursuing my Master’s degree with a focus on next-generation actuators and lightweight collaborative robots. My research includes advanced actuator development at the <strong>Yaskawa Future Technology Laboratory</strong>, as well as exploring reservoir computing at the <strong>University of Cambridge</strong>.
+            <br /><br />
+              Beyond my professional and academic work, I create short documentaries on my YouTube channel, <strong><em>Explained</em></strong> (@explainedshow), where I simplify complex topics for a broader audience.
+            <br /><br />
+            Let’s connect and explore the future of robotics and automation together.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /About -->
+
+    <!-- ======= Resume (separate section) ======= -->
+    <section id="resume" class="resume bg-photo" style="background-image:url('assets/img/resume-bg.jpg')">
+      <div class="container glass-panel" data-aos="fade-up">
+        <div class="section-title"><h2>Resume</h2></div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Varun Chavan</h4>
+              <p><em>Mechanical Engineer with interest in Robotics, Machine Design and Prototyping</em></p>
+              <ul>
+                <li>Itabashi City, Tokyo, Japan</li>
+                <li><a href="mailto:varunchavan20@gmail.com">varunchavan20@gmail.com</a></li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master in Mechanical Engineering</h4>
+              <h5>2024 - 2026</h5>
+              <p><em>Institute of Science Tokyo (Formerly Tokyo Tech)</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor in Mechanical Engineering</h4>
+              <h5>2017 - 2020</h5>
+              <p><em>Savitribai Phule Pune University, Pune</em></p>
+              <p>CGPA : 8.86</p>
+            </div>
+            <div class="resume-item">
+              <h4>Diploma in Mechanical Engineering</h4>
+              <h5>2014 - 2017</h5>
+              <p><em>Government Polytechnic Khamgaon</em></p>
+              <p>Percentage : 89.47%</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Visiting Researcher</h4>
+              <h5>Sep 2025 – Present</h5>
+              <p><em>University of Cambridge, Cambridge, UK</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Research Engineer</h4>
+              <h5>June 2022 – Present</h5>
+              <p><em>Oriental Yeast Company Ltd, Tokyo, Japan</em></p>
+              <ul>
+                <li>Lead and deployed company-wide Spare Part Management System.</li>
+                <li>Development and Beta testing of Production Forecasting System.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Junior Research Fellow</h4>
+              <h5>Aug 2021 – May 2022</h5>
+              <p><em>Indian Institute of Technology, Gandhinagar, India</em></p>
+              <ul>
+                <li>Designed and developed research-grade OSAKE robot.</li>
+                <li>Implemented adaptive control (LabVIEW FPGA on NI sbRIO-9629).</li>
+                <li>Demonstrated generalization and human-like learning ability on OSAKE.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Summer Intern</h4>
+              <h5>June 2019 – July 2019</h5>
+              <p><em>Toyo Engineering Ltd, Mumbai, India</em></p>
+              <ul>
+                <li>Worked on flare design for a chemical plant.</li>
+                <li>Supported selection of glass-reinforced safety tanks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Resume -->
+
+    <!-- ======= Projects ======= -->
+    <section id="blog" class="blog-mf sect-pt4 route bg-photo" style="background-image:url('assets/img/projects-bg.jpg')">
+      <div class="container glass-panel">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">Projects</h3>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card card-blog h-100">
+              <div class="card-img"><img src="assets/img/post-1.jpg" alt="OSAKE robot" class="img-fluid" loading="lazy" /></div>
+              <div class="card-body">
+                <div class="card-category-box"><div class="card-category"><h6 class="category">OSAKE</h6></div></div>
+                <h3 class="card-title">Optimal Stiffness and Control Experimentation Robot</h3>
+                <p class="card-description mb-0">OSAKE is a robot with human-like learning properties that learns optimal impedance from repeated physical interactions with the environment.</p>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-between">
+                <div class="post-author d-flex align-items-center gap-2">
+                  <img src="assets/img/testimonial-2.jpg" alt="Varun Chavan" class="avatar rounded-circle" width="36" height="36" loading="lazy" />
+                  <span class="author">Varun Chavan</span>
+                </div>
+                <div class="post-date"><span class="bi bi-clock"></span> 10 min</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card card-blog h-100">
+              <div class="card-img"><img src="assets/img/post-2.jpg" alt="ATAV project" class="img-fluid" loading="lazy" /></div>
+              <div class="card-body">
+                <div class="card-category-box"><div class="card-category"><h6 class="category">ATAV</h6></div></div>
+                <h3 class="card-title">All-Terrain Autonomous Vehicle</h3>
+                <p class="card-description mb-0">The project delivers items autonomously and is able to travel on any terrain.</p>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-between">
+                <div class="post-author d-flex align-items-center gap-2">
+                  <img src="assets/img/testimonial-2.jpg" alt="Varun Chavan" class="avatar rounded-circle" width="36" height="36" loading="lazy" />
+                  <span class="author">Varun Chavan</span>
+                </div>
+                <div class="post-date"><span class="bi bi-clock"></span> 10 min</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card card-blog h-100">
+              <div class="card-img"><img src="assets/img/post-3.jpg" alt="Farming Bicycle" class="img-fluid" loading="lazy" /></div>
+              <div class="card-body">
+                <div class="card-category-box"><div class="card-category"><h6 class="category">Farming Bicycle</h6></div></div>
+                <h3 class="card-title">Semi-Automated Seed & Fertilizer Sowing Bicycle</h3>
+                <p class="card-description mb-0">Performs farming operations like ploughing, seed sowing, and fertilizer spreading with minimal cost and human effort.</p>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-between">
+                <div class="post-author d-flex align-items-center gap-2">
+                  <img src="assets/img/testimonial-2.jpg" alt="Varun Chavan" class="avatar rounded-circle" width="36" height="36" loading="lazy" />
+                  <span class="author">Varun Chavan</span>
+                </div>
+                <div class="post-date"><span class="bi bi-clock"></span> 10 min</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Projects -->
+
+    <!-- ======= YouTube ======= -->
+    <section id="work" class="portfolio-mf sect-pt4 route bg-photo" style="background-image:url('assets/img/youtube-bg.jpg')">
+      <div class="container glass-panel">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">YouTube Content</h3>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-md-6 d-flex">
+            <div class="work-box flex-fill">
+              <div class="work-img">
+                <a href="https://www.youtube.com/playlist?list=PLwCPy7FT756ilLY9f-vNQfpzHO5yIdEhs" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/img/work-1.jpg" alt="Explained playlist cover" class="img-fluid" loading="lazy" />
+                </a>
+              </div>
+              <div class="work-content">
+                <h2 class="w-title"><a href="https://www.youtube.com/playlist?list=PLwCPy7FT756ilLY9f-vNQfpzHO5yIdEhs" target="_blank" rel="noopener noreferrer">Explained</a></h2>
+                <div class="w-more"><span class="w-ctegory">Playlist</span> / <span class="w-date"><span id="explained-episodes">—</span> Episodes</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex">
+            <div class="work-box flex-fill">
+              <div class="work-img">
+                <a href="https://www.youtube.com/playlist?list=PLwCPy7FT756gW3VL18gH8C8cfWSt6zBRC" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/img/work-2.jpg" alt="Evolution of Cars playlist cover" class="img-fluid" loading="lazy" />
+                </a>
+              </div>
+              <div class="work-content">
+                <h2 class="w-title"><a href="https://www.youtube.com/playlist?list=PLwCPy7FT756gW3VL18gH8C8cfWSt6zBRC" target="_blank" rel="noopener noreferrer">Evolution of Cars</a></h2>
+                <div class="w-more"><span class="w-ctegory">Playlist</span> / <span class="w-date"><span id="cars-episodes">—</span> Episodes</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-sm-12">
+            <div class="title-box text-center"><h2>Recent Videos</h2></div>
+            <div class="video-wrapper">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/videoseries?list=PLwCPy7FT756ilLY9f-vNQfpzHO5yIdEhs" title="Explained playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /YouTube -->
+
+    <!-- ======= Counters ======= -->
+    <section class="section-counter paralax-mf bg-image" style="background-image:url(assets/img/counters-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box counter-box pt-4 pt-md-0 text-center">
+              <div class="counter-ico"><span class="ico-circle"><i class="bi bi-eye"></i></span></div>
+              <div class="counter-num"><p class="counter purecounter" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" id="yt-views"></p><span class="counter-text">VIEWS</span></div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0 text-center">
+              <div class="counter-ico"><span class="ico-circle"><i class="bi bi-people"></i></span></div>
+              <div class="counter-num"><p class="counter purecounter" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" id="yt-subs"></p><span class="counter-text">SUBSCRIBERS</span></div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0 text-center">
+              <div class="counter-ico"><span class="ico-circle"><i class="bi bi-upload"></i></span></div>
+              <div class="counter-num"><p class="counter purecounter" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" id="yt-videos"></p><span class="counter-text">VIDEOS</span></div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0 text-center">
+              <div class="counter-ico"><span class="ico-circle"><i class="bi bi-list-ol"></i></span></div>
+              <div class="counter-num"><p class="counter purecounter" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" id="explained-episodes-counter"></p><span class="counter-text">EXPLAINED EPISODES</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Counters -->
+
+    <!-- ======= Contact ======= -->
+    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route bg-photo" style="background-image:url('assets/img/overlay-bg.jpg')">
+      <div class="container glass-panel">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="title-box-2"><h5 class="title-left">Contact me</h5></div>
+            <div class="responsive-form" aria-label="Contact form">
+              <iframe loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSdPMij5nJ0-o1Ps-G_HuDAxI72n_KYMSxLZfC0pStnJhHF7cQ/viewform?embedded=true">Loading…</iframe>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="title-box-2 pt-4 pt-md-0"><h5 class="title-left">Get in Touch</h5></div>
+            <div class="more-info">
+              <ul class="list-ico">
+                <li><span class="bi bi-geo-alt"></span> Itabashi, Tokyo, Japan</li>
+                <li><span class="bi bi-envelope"></span> <a href="mailto:varunchavan20@gmail.com">varunchavan20@gmail.com</a></li>
+              </ul>
+            </div>
+            <div class="socials">
+              <ul>
+                <!-- Facebook removed per request -->
+                <li><a href="#" aria-label="Instagram"><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
+                <li><a href="https://www.youtube.com/channel/UCEnBtPoHVPgS22vQDTKXeGA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span class="ico-circle"><i class="bi bi-youtube"></i></span></a></li>
+                <li><a href="https://www.linkedin.com/in/varun-chavan-275b6a158/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Contact -->
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <strong>Varun Chavan</strong>. All Rights Reserved</p>
+            <div class="credits">Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/purecounter/purecounter.js" defer></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/typed.js/typed.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- Live YouTube counters + playlist sizes -->
+  <script>
+    const YT_API_KEY = "AIzaSyDspmcvhZgiouWnXPQAUsH--cZhoZZ8Zgg"; // <-- replace & restrict by HTTP referrer
+    const CHANNEL_ID = "UCEnBtPoHVPgS22vQDTKXeGA";
+    const EXPLAINED_PLAYLIST_ID = "PLwCPy7FT756ilLY9f-vNQfpzHO5yIdEhs";
+    const CARS_PLAYLIST_ID = "PLwCPy7FT756gW3VL18gH8C8cfWSt6zBRC";
+
+    async function fetchJSON(url){ const r = await fetch(url); if(!r.ok) throw new Error(r.status); return r.json(); }
+    function animateCounters(){ if(typeof PureCounter !== 'undefined') new PureCounter(); }
+    function setCounter(el, v){ if(!el) return; el.setAttribute('data-purecounter-end', String(v)); el.textContent = String(v); }
+
+    async function loadYouTubeStats(){
+      if(!YT_API_KEY || YT_API_KEY === "YOUR_YT_API_KEY") return;
+      try{
+        // Channel stats
+        const statsURL = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${YT_API_KEY}`;
+        const statsData = await fetchJSON(statsURL);
+        const s = statsData?.items?.[0]?.statistics || {};
+        setCounter(document.getElementById('yt-views'), Number(s.viewCount||0));
+        const subsEl = document.getElementById('yt-subs');
+        if(s.hiddenSubscriberCount){ subsEl.textContent = 'Private'; } else { setCounter(subsEl, Number(s.subscriberCount||0)); }
+        setCounter(document.getElementById('yt-videos'), Number(s.videoCount||0));
+
+        // Playlist sizes
+        const pl1 = await fetchJSON(`https://www.googleapis.com/youtube/v3/playlistItems?part=id&maxResults=1&playlistId=${EXPLAINED_PLAYLIST_ID}&key=${YT_API_KEY}`);
+        const explainedTotal = pl1?.pageInfo?.totalResults ?? 0;
+        setCounter(document.getElementById('explained-episodes-counter'), explainedTotal);
+        const expBadge = document.getElementById('explained-episodes'); if(expBadge) expBadge.textContent = explainedTotal;
+
+        const pl2 = await fetchJSON(`https://www.googleapis.com/youtube/v3/playlistItems?part=id&maxResults=1&playlistId=${CARS_PLAYLIST_ID}&key=${YT_API_KEY}`);
+        const carsTotal = pl2?.pageInfo?.totalResults ?? 0;
+        const carsBadge = document.getElementById('cars-episodes'); if(carsBadge) carsBadge.textContent = carsTotal;
+
+        animateCounters();
+      }catch(e){ console.warn('YouTube stats failed', e); }
+    }
+    document.addEventListener('DOMContentLoaded', loadYouTubeStats);
+  </script>
+</body>
+</html>
